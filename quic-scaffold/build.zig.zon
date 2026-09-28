@@ -1,0 +1,28 @@
+.{
+    // Package name used when other packages depend on this one via
+    // `zig fetch --save <url>`.
+    .name = .quic_scaffold,
+
+    // Semantic version of this scaffold.
+    .version = "0.0.1",
+
+    // Globally unique identifier for this package. Generated once and left
+    // unchanged; regenerate only if forking this project as a new, unrelated
+    // package.
+    .fingerprint = 0xfb57b73f0a069c4c,
+
+    // Earliest Zig version this scaffold is expected to build with.
+    .minimum_zig_version = "0.15.2",
+
+    // No external dependencies yet. A real implementation will likely want
+    // a TLS 1.3 library here (or a binding to one) unless std.crypto grows
+    // full QUIC/TLS support.
+    .dependencies = .{},
+
+    // Files included when this package is packaged/fetched by others.
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}
